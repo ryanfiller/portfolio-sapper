@@ -20,7 +20,7 @@ Install dependencies
 
 ``` shell
 cd ryansite
-yarn install
+npm install
 ```
 
 ## I like Sapper!
@@ -30,7 +30,7 @@ This site is built using [Svelte](https://svelte.dev/) & [Sapper](https://sapper
 Navigate into this site’s directory and start it up.
 
 ``` shell
-npm run start
+npm run dev
 ```
 
 The site is now running at `http://localhost:3000`!
@@ -71,4 +71,4 @@ This is a public repository under an MIT license. Feel free to replicate any cod
 
 ## Old Repo
 
-If for some reason you're looking for the [Gatsby](https://www.gatsbyjs.com/) version of this site, that repo can be found [here](ttps://github.com/ryanfiller/portfolio-gatsby-v2).
+If for some reason you're looking for the [Gatsby](https://www.gatsbyjs.com/) version of this site, that repo can be found [here](https://github.com/ryanfiller/portfolio-gatsby-v2).
