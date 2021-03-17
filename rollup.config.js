@@ -1,30 +1,23 @@
-import resolve from '@rollup/plugin-node-resolve'
-import replace from '@rollup/plugin-replace'
-import commonjs from '@rollup/plugin-commonjs'
 import svelte from 'rollup-plugin-svelte'
-import { terser } from 'rollup-plugin-terser'
 import config from 'sapper/config/rollup.js'
 import pkg from './package.json'
-import { mdsvex } from 'mdsvex'
+
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars'
-import svelteSVG from 'rollup-plugin-svelte-svg'
-import { globalStyle, scss } from 'svelte-preprocess'
+import resolve from '@rollup/plugin-node-resolve'
+import replace from '@rollup/plugin-replace' // can you replace this with svelte-preprocess???
 import copy from 'rollup-plugin-copy'
+import svelteSVG from 'rollup-plugin-svelte-svg' // can you replace this with url???
+
+import commonjs from '@rollup/plugin-commonjs'
+import { terser } from 'rollup-plugin-terser'
+
+import { mdsvex } from 'mdsvex'
+import remarkPlugins from './plugins/remark/index.js'
+import rehypePlugins from './plugins/rehype/index.js'
+import sveltePreprocess, { postcss, globalStyle } from 'svelte-preprocess'
+
 require('dotenv').config()
 
-import attr from 'remark-attr'
-import remarkCustomBlocks from 'remark-custom-blocks'
-// TODO remark-abbr
-// TODO https://github.com/JS-DevTools/rehype-toc
-
-// custom plugins
-import blockquote from './plugins/remark/blockquote'
-import headings from './plugins/remark/headings'
-import images from './plugins/remark/images'
-import links from './plugins/remark/links'
-// import video from './plugins/remark/video' // only called from image component for now...
-import embed from './plugins/rehype/embed'
-import twitter from './plugins/rehype/twitter'
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
@@ -56,30 +49,15 @@ const preprocess = [
 			lab: 'src/layouts/lab.svelte',
 			_: 'src/layouts/markdown.svelte',
 		},
-		remarkPlugins: [
-			[attr, { scope: 'every' }],
-			[remarkCustomBlocks, {
-				details: {
-					classes: 'details',
-					title: 'required',
-					details: true
-				},
-				clearfix: {
-					classes: 'clearfix'
-				}
-			}],
-			blockquote,
-			headings,
-			images,
-			links,
-			// video
-		],
-		rehypePlugins: [
-			embed,
-			twitter
-		],
+		remarkPlugins: [...remarkPlugins],
+		rehypePlugins: [...rehypePlugins],
 	}),
+	// sveltePreprocess({
+		// 	sourceMap: dev,
+		// 	defaults: { style: 'css' }
+		// })
 	scss(),
+	postcss(),
 	globalStyle()
 ]
 
