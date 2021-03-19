@@ -13,8 +13,8 @@
   const h = title ? '3' : '2'
 </script>
 
-<style type="text/scss">
- @import '../../styles/functions.scss';
+<style>
+ // @import '../../styles/functions.scss';
  
   section.content-list {
     @include readable();

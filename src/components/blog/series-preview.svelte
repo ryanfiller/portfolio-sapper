@@ -24,7 +24,7 @@
 <style global type='text/scss'>
   // this is currently inehertting .post-preview from `global` in post-preview.svelte
 
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
 
   .series-preview {
     padding: calc(2 * var(--padding));

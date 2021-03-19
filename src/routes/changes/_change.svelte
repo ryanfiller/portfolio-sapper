@@ -1,7 +1,7 @@
 <!-- TODO make this a generic 'collapse' or something component-->
 
 <style global type='text/scss'>
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
   
   .change {
     border: .125rem solid var(--colorPrimary);

@@ -1,5 +1,5 @@
 <style global type='text/scss'>
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
 
   .markdown {
     padding: calc(2 * var(--padding));

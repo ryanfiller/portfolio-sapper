@@ -97,7 +97,7 @@
 <svelte:head>
   <!-- bummer, this only works for js people -->
   {@html `
-    <style>
+    <${'style'}>
       html[data-user-color-scheme] [data-color^="color"] {
         display: none;
       }
@@ -113,7 +113,7 @@
       html[data-user-color-scheme] .color-chart--show-all-colors [data-color^="color"] {
         display: revert !important;
       }
-    </style>
+    </${'style'}>
   `}
 </svelte:head>
 

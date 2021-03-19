@@ -11,7 +11,7 @@
 </script>
 
 <style global type='text/scss'>
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
 
   :root {
     // for calc() division the right size number had to be unitless, * 1px everywhere to fix this

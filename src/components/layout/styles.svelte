@@ -22,7 +22,7 @@
   <meta name='color-scheme' content='dark light'>
   <!-- TODO need some sort of function/mixin for this... -->
   {@html `
-    <style>
+    <${'style'}>
       :root {
         ${setColors(colors)}
         ${setTheme(themes.light)}
@@ -38,7 +38,7 @@
       [data-user-color-scheme='dark'] {
         ${setTheme(themes.dark)}
       }
-    </style>
+    </${'style'}>
   `}
 
   <!-- preload fonts for performance reasons -->

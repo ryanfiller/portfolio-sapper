@@ -7,7 +7,7 @@
 </script>
 
 <style global type='text/scss'>
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
 
   .footer {
     font-size: 1em;

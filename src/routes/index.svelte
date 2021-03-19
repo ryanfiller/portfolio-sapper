@@ -24,10 +24,7 @@
   import Form from '../components/form.svelte'
 </script>
 
-<style global type='text/scss'>
-
-  @import '../styles/functions.scss';
-
+<style global>
   #content.homepage {
     /* TODO remove this */
     .temp-bio,
@@ -37,11 +34,12 @@
     }
 
     .temp-bio {
-      div {
-        line-height: 1.5;
+      h1 {
+        margin-top: 0;
       }
-    
+
       p {
+        line-height: 1.5;
         margin: 1em 0;
       }
     
@@ -56,7 +54,6 @@
       margin-top: 10rem;
     }
   }
-
 </style>
 
 <Page hideBanner>

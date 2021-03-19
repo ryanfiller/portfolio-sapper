@@ -1,5 +1,5 @@
 <style type='text/scss'>
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
 
   .variable-font {
     margin: var(--padding) 0;

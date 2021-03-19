@@ -6,7 +6,7 @@
 </script>
 
 <style global type='text/scss'>
-  @import '../../styles/functions.scss';
+  // @import '../../styles/functions.scss';
 
   .header {
     color: var(--colorWhite);
