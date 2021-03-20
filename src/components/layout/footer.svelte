@@ -6,35 +6,31 @@
   import SocialLinks from './social-links.svelte'
 </script>
 
-<style global type='text/scss'>
-  // @import '../../styles/functions.scss';
-
+<style>
   .footer {
     font-size: 1em;
     color: var(--colorWhite);
     background: var(--colorPrimary);
     
-    &__content {
-      padding-top: 1rem;
-      @include container;
-      font-weight: bold;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+    padding: 1rem var(--padding);
+    padding-bottom: 0;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 
-      & > * {
-        margin-bottom: 1rem;
-      }
-    
-      a {
-        text-decoration: none;
-        color: currentColor;
-        margin: 0 .25em;
-        
-        &:hover {
-          text-decoration: underline;
-        }
+    & > :global(*) {
+      margin-bottom: 1rem !important;
+    }
+  
+    a {
+      text-decoration: none;
+      color: currentColor;
+      margin: 0 .25em;
+      
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
@@ -46,25 +42,22 @@
   id='site-footer'
   class='footer'
 >
-  <div class='footer__content'>
-    <span>
-      Built with
-      <a href='https://sapper.svelte.dev/' target='_blank' rel='noopener noreferrer'>
-        Sapper
-      </a>
-        and hosted on
-      <a href='https://www.netlify.com/' target='_blank' rel='noopener noreferrer'>
-        Netlify
-      </a>
-    </span>
+  <span>
+    Built with
+    <a href='https://sapper.svelte.dev/' target='_blank' rel='noopener noreferrer'>
+      Sapper
+    </a>
+      and hosted on
+    <a href='https://www.netlify.com/' target='_blank' rel='noopener noreferrer'>
+      Netlify
+    </a>
+  </span>
 
-    <SocialLinks />
+  <SocialLinks />
 
-    <Nav
-      segment={segment}
-      links={secondaryNav}
-      label='utility navigation'
-    />
-
-  </div>
+  <Nav
+    segment={segment}
+    links={secondaryNav}
+    label='utility navigation'
+  />
 </footer>

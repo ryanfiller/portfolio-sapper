@@ -10,8 +10,8 @@
   import Footer from '../components/layout/footer.svelte'
 </script>
 
-<style global>
-	#site {
+<style>
+	:global(#site) {
     min-height: 100vh;
     width: 100%;
     display: grid;
@@ -25,13 +25,13 @@
       "footer";
   }
   
-  #site-header {
+  :global(#site-header) {
     grid-area: header;
     width: 100%;
     height: 100%;
   }
 
-  #content {
+  :global(#content) {
     grid-area: content;
     width: 100%;
     min-height: 100%;
@@ -40,7 +40,7 @@
     justify-content: space-between;
   }
 
-  #site-footer {
+  :global(#site-footer) {
     grid-area: footer;
     width: 100%;
     height: 100%;

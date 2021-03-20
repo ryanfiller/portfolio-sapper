@@ -22,15 +22,16 @@
   }
 </script>
 
-<style global>
-  .social-list {
+<style>
+  ul {
     list-style: none;
-    margin-left: 0;
+    margin: 0;
+    padding: 0;
     display: flex;
     font-size: 1em;
   }
 
-  .social-list__link {
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,25 +39,24 @@
     padding: .25em;
   }
   
-  .social-list__link svg {
+  a :global(svg) {
     fill: var(--colorWhite);
     height: 1em;
     width: 1em;
   }
 
-  .social-list__item:hover a {
+  li:hover a {
     background-color: currentColor;
   }
 </style>
 
 <ul class='social-list'>
   {#each links as link}
-    <li class='social-list__item'>
+    <li>
       {#if link.name === 'email'}
         <a
           href={link.url}
           title={link.text}
-          class='social-list__link'
           style='color: {link.color};'
         >
           <svelte:component this={icons[link.name]}/>
@@ -65,7 +65,6 @@
         <a
           href={link.url}
           title={link.text}
-          class='social-list__link'
           target='_blank' rel='noopener noreferrer'
           style='color: {link.color};'
         >

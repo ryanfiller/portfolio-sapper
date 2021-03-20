@@ -14,10 +14,7 @@
 </script>
 
 <style>
- // @import '../../styles/functions.scss';
- 
   section.content-list {
-    @include readable();
     clear: both;
     line-height: 1.5;
 
@@ -41,7 +38,7 @@
 
 </style>
 
-<section class='content-list'>
+<section class='content-list container readable'>
   {#if title}
     <h2>{title}</h2>
   {/if}

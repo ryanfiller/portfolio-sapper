@@ -1,4 +1,4 @@
-<style global type='text/scss'> 
+<style global> 
   .framework-list {
     --iconSize: 2rem;
 
@@ -28,6 +28,7 @@
           background-position: center center;
           background-repeat: no-repeat;
           position: sticky;
+          z-index: 100;
           top: calc(.5 * var(--iconSize));
           transform: translateX(calc(-1.5 * var(--iconSize)));
         }

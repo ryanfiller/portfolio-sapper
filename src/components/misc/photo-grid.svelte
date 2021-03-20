@@ -32,8 +32,7 @@
 
 <!-- TODO this entire idea needs to get rewritten and tested -->
 
-<style global>
-
+<style>
   .photo-grid {
     clear: both;
     display: grid;
@@ -51,7 +50,7 @@
     margin-left: calc(-1 * var(--width) / 2);
   }
 
-  .photo-grid button {
+  button {
     display: block;
     border: 0;
     padding: 0;
@@ -60,25 +59,25 @@
   }
 
   /* TODO abstract this */
-  .photo-grid figure.active,
-  .photo-grid figure > button:hover,
-  .photo-grid figure > button:focus {
+  figure.active,
+  figure > button:hover,
+  figure > button:focus {
     outline: .25rem solid var(--colorHighlight);
   }
 
-  [data-no-js] .photo-grid button:hover,
-  [data-no-js] .photo-grid button:focus {
+  :global([data-no-js]) button:hover,
+  :global([data-no-js]) button:focus {
     outline: none;
     cursor: initial;
   }
 
-  .photo-grid img,
-  .photo-grid figure {
+  img,
+  figure {
     margin: 0 !important;
   }
 
   /* TODO abstract close button class */
-  .photo-grid figcaption button {
+  figcaption button {
     position: absolute;
     top: var(--padding);
     right: var(--padding);
@@ -90,12 +89,12 @@
     cursor: pointer;
   }
 
-  .photo-grid figcaption button span {
+  figcaption button span {
     opacity: 0;
     position: absolute;
   }
-  .photo-grid figcaption button::before,
-  .photo-grid figcaption button::after {
+  figcaption button::before,
+  figcaption button::after {
     content: '';
     display: block;
     height: .25em;
@@ -106,15 +105,15 @@
     left: 50%;
   }
 
-  .photo-grid figcaption button::before {
+  figcaption button::before {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 
-  .photo-grid figcaption button::after {
+  figcaption button::after {
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  .photo-grid figcaption {
+  figcaption {
     position: fixed;
     top: 0;
     right: 0;
@@ -129,11 +128,11 @@
     align-items: center;
   }
 
-  .photo-grid figure.active figcaption {
+  figure.active figcaption {
     display: flex;
   }
 
-  .photo-grid figcaption::before {
+  figcaption::before {
     content: '';
     display: block;
     margin: var(--padding);
@@ -146,19 +145,19 @@
     background-position: center;
   }
 
-  .photo-grid figcaption header {
+  figcaption header {
     max-width: var(--readableMax);
     font-size: 1.75em;
     margin-bottom: 1rem;
   }
 
-  .photo-grid figcaption p {
+  figcaption p {
     font-size: 1.25em;
     max-width: var(--readableMax);
     pointer-events: initial;
   }
 
-  .photo-grid figcaption::after {
+  figcaption::after {
     content: '';
     position: fixed;
     top: 0;

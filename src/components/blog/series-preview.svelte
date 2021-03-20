@@ -12,7 +12,7 @@
   const renderHeader = () => `
     <h${h} class='post-preview__header'>
     ${hidePosts
-      ? `<a rel='prefetch' href=${slug}>
+      ? `<a sapper:prefetch href=${slug}>
         ${title}
       </a>`
       : title
@@ -21,22 +21,18 @@
   `
 </script>
 
-<style global type='text/scss'>
-  // this is currently inehertting .post-preview from `global` in post-preview.svelte
-
-  // @import '../../styles/functions.scss';
+<style>
+  /* this is currently inehertting .post-preview from `global` in post-preview.svelte */
 
   .series-preview {
-    padding: calc(2 * var(--padding));
-    @include readable();
-
-    .content-list & {
+    :global(.content-list) & {
       padding: 0;
     }
 
     .post-preview-list {
       list-style: none;
       margin: 0;
+      padding: 0;
     }
   }
 </style>
@@ -58,7 +54,7 @@
     </ul>
   {/if}
   {#if hidePosts}
-    <a rel='prefetch' href={slug} class='post-preview__link'>
+    <a sapper:prefetch href={slug} class='post-preview__link'>
       See Posts
     </a>
   {/if}

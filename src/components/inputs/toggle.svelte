@@ -6,7 +6,7 @@
   export let checked = false
 </script>
 
-<style global type='text/scss'>
+<style>
   .toggle {
     input,
     label span {
@@ -35,7 +35,6 @@
         transition: .3s;
       }
     }
-
 
     input:checked ~ label::after {
       transform: translateX(1em);

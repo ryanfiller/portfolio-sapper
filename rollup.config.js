@@ -15,7 +15,8 @@ import { terser } from 'rollup-plugin-terser'
 import { mdsvex } from 'mdsvex'
 import remarkPlugins from './plugins/remark/index.js'
 import rehypePlugins from './plugins/rehype/index.js'
-import sveltePreprocess, { scss } from 'svelte-preprocess'
+import sveltePreprocess from 'svelte-preprocess'
+import { breakpoints } from './src/styles/config.js'
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
@@ -28,10 +29,21 @@ if (process.env.CONTEXT !== 'production') {
 	netlifyUrl = process.env.URL
 }
 
-const envVars = {
+const setScssBreaks = () => {
+	const breaks = {}
+	 Object.entries(breakpoints).forEach(breakpoint => {
+		const [ size, pixels ] = breakpoint
+		breaks[`js-replace-${size}`] = `${pixels}px`
+	}) 
+	return breaks
+}
+
+const replaceVars = {
 	'process.env.NODE_ENV': JSON.stringify(mode),
 	'process.env.NETLIFY_URL': JSON.stringify(netlifyUrl),
 	'process.env.CLOUDINARY_CLOUD': JSON.stringify(process.env.CLOUDINARY_CLOUD),
+	'js-replace-small': `576px`,
+	...setScssBreaks(),
 	exclude: 'src/routes/**/*.md'
 }
 
@@ -51,11 +63,9 @@ const preprocess = [
 		rehypePlugins: [...rehypePlugins],
 	}),
 	sveltePreprocess({
-		// sourceMap: dev,
 		defaults: { style: 'scss' },
     scss: { prependData: `@import 'src/styles/functions.scss';` },
-	}),
-	scss()
+	})
 ]
 
 const onwarn = (warning, onwarn) =>
@@ -70,7 +80,7 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				...envVars
+				...replaceVars
 			}),
 			svelte({
 				dev,
@@ -107,7 +117,7 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				...envVars
+				...replaceVars
 			}),
 			svelte({
 				dev,
@@ -143,7 +153,7 @@ export default {
 	// 		resolve(),
 	// 		replace({
 	// 			'process.browser': true,
-	// 			...envVars
+	// 			...replaceVars
 	// 		}),
 	// 		commonjs(),
 	// 		!dev && terser()

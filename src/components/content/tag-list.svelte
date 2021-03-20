@@ -5,10 +5,9 @@
   import { format } from 'date-fns'
 </script>
 
-<style global type='text/scss'>
+<style>
   .tag-list {
-    .categories,
-    .tags {
+    ul {
       font-size: 1em;
       color: currentColor;
       list-style: none;
@@ -30,8 +29,8 @@
         }
       }
 
-      &:only-child, // when there's only one list
-      & + ul { // get rid of the last comma when cats and tags are siblings
+      &:only-child, /* when there's only one list */
+      & + ul { /* get rid of the last comma when cats and tags are siblings */
         li:last-child:after {
           content: '';
           margin-right: 0;

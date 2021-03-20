@@ -11,7 +11,7 @@
   const toggleTheme = () => theme === 'light' ? theme = 'dark' : theme = 'light'
 </script>
 
-<style global type='text/scss'>
+<style>
   .theme-example {
     --white: #ffffff;
     --black: #000000;
@@ -23,13 +23,13 @@
     --text: var(--black);
     --background: var(--white);
 
-    [data-user-color-scheme="light"] &,
+    :global([data-user-color-scheme="light"]) &,
     &.theme-example--light:is(section) { // specificity!
       --text: var(--black);
       --background: var(--white);
     }
 
-    [data-user-color-scheme="dark"] &,
+    :global([data-user-color-scheme="dark"]) &,
     &.theme-example--dark:is(section) { // specificity!
       --text: var(--white);
       --background: var(--black);

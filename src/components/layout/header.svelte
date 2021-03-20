@@ -5,10 +5,8 @@
   import ColorSchemeToggle from './color-scheme-toggle.svelte'
 </script>
 
-<style global type='text/scss'>
-  // @import '../../styles/functions.scss';
-
-  .header {
+<style>
+  header {
     color: var(--colorWhite);
     background: var(--colorPrimary);
     font-weight: bold;
@@ -20,13 +18,13 @@
     grid-template-areas: "logo    gap     nav    options"
                          "content content content content";
 
-    & > * { // put things on top of the banner
+    & > :global(*) { /* put things on top of the banner */
       position: relative;
       z-index: 2;
     }
 
     .logo,
-    nav,
+    :global(nav),
     .options {
       margin: 1rem var(--padding);
     }
@@ -46,7 +44,7 @@
       font-size: 1.5em;
     }
 
-    nav {
+    :global(nav) {
       grid-area: nav;
     }
 
@@ -61,7 +59,6 @@
 
 <header
   id='site-header'
-  class='header'
 >
   <a href='/' class='logo'>
     ryanfiller.com

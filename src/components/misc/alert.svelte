@@ -44,12 +44,12 @@
     color: var(--colorWhite);
   }
 
-  .alert__title {
+  .title {
     font-size: 1.5em;
     padding-left: var(--padding);
   }
 
-  .alert__content {
+  .content {
     color: var(--colorText);
   }
 
@@ -61,7 +61,7 @@
     role='note'
   >
     <header>
-      <strong class='alert__title'>
+      <strong class='title'>
         <!-- TODO this really ought to be a slot... -->
         {title}
       </strong>
@@ -72,7 +72,7 @@
       {/if}
     </header>
 
-    <div class='alert__content'>
+    <div class='content'>
       <slot />
     </div>
   </aside>

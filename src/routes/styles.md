@@ -4,7 +4,7 @@ title: 'Style Guide'
 ---
 
 <script>
-  import { colors } from '../styles.js'
+  import { colors } from '../styles/config.js'
   import ColorChart from '../components/misc/color-chart.svelte'
   import { Tabs, Tab } from '../components/misc/tabs'
   import Alert from '../components/misc/alert.svelte'
@@ -19,6 +19,14 @@ title: 'Style Guide'
   <ColorChart colors={colors} />
 
 </div>
+
+```
+@mixin small() {
+  @media screen and (min-width: $smallBreak) {
+    @content;
+  }
+}
+```
 
 <div id="headings">
 

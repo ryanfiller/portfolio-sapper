@@ -16,66 +16,71 @@
   }
 </script>
 
-<style global type='text/scss'>
-  .series-navigator {
-    &__title {
-      color: var(--colorWhite);
-      background: var(--colorHighlight);
-      text-align: center;
-      padding: var(--padding);
-      a {
-        color: inherit;
-        &:not(:hover) {
-          text-decoration: none;
-        }
+<style>
+  .title {
+    color: var(--colorWhite);
+    background: var(--colorHighlight);
+    text-align: center;
+    padding: var(--padding);
+    a {
+      color: inherit;
+      &:not(:hover) {
+        text-decoration: none;
       }
     }
-    &__buttons {
-      background: var(--colorHighlight);
-      display: flex;
+  }
+
+  .buttons {
+    background: var(--colorHighlight);
+    display: flex;
+  }
+
+  .previous,
+  .next {
+    flex-wrap: wrap;
+    width: 50%;
+
+    &:before {
+      font-size: .8em;
+      margin-bottom: calc(.5 * var(--padding));
+      display: block;
     }
-    &__previous,
-    &__next {
-      flex-wrap: wrap;
-      width: 50%;
-      &:before {
-        font-size: .8em;
-        margin-bottom: calc(.5 * var(--padding));
-        display: block;
-      }
+  }
+
+  .previous {
+    text-align: right;
+    margin-right: auto;
+
+    &:before {
+      content: '« previous';
     }
-    &__previous {
-      text-align: right;
-      margin-right: auto;
-      &:before {
-        content: '« previous';
-      }
-    }
-    &__next {
-      text-align: left;
-      margin-left: auto;
-      &:before {
-        content: 'next »';
-      }
+  }
+
+  .next {
+    text-align: left;
+    margin-left: auto;
+    
+    &:before {
+      content: 'next »';
     }
   }
 </style>
 
 {#if series}  
-  <aside class='series-navigator__title'>
+  <aside class='title'>
     This is post {postIndex + 1} of {series.posts.length} in the <a href={series.slug}>{series.title}</a> series.
   </aside>
 
   <slot />
 
-  <aside class='series-navigator__buttons'>
+  <aside class='buttons'>
     {#if previous}
-      <a href={previous.slug} class='series-navigator__previous button'>
+      <a href={previous.slug} class='previous button'>
         {previous.title}
       </a>
     {/if}
     {#if next}
-      <a href={next.slug} class='series-navigator__next button'>
+      <a href={next.slug} class='next button'>
         {next.title}
       </a>
     {/if}

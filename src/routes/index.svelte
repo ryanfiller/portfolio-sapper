@@ -21,7 +21,7 @@
   import List from  '../components/content/list.svelte'
   import PostPreview from '../components/blog/post-preview.svelte'
   import SeriesPreview from '../components/blog/series-preview.svelte'
-  import Form from '../components/form.svelte'
+  import Form from '../components/inputs/form.svelte'
 </script>
 
 <style global>
@@ -29,7 +29,6 @@
     /* TODO remove this */
     .temp-bio,
     form#contact {
-      @include readable();
       margin-bottom: var(--padding);
     }
 
@@ -50,14 +49,15 @@
       }
     }
 
-    & > * {
+    & > :global(*) {
       margin-top: 10rem;
+      margin-bottom: 10rem;
     }
   }
 </style>
 
 <Page hideBanner>
-  <section class='temp-bio'>
+  <section class='temp-bio container readable'>
     <img  
       src={`${site.headshot}?nf_resize=fit&w=100`}
       alt={site.author}

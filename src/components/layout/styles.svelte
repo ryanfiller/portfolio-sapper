@@ -1,5 +1,5 @@
 <script>
-  import { colors, themes } from '../../styles.js'
+  import { colors, themes } from '../../styles/config.js'
   import { capitalize } from '../../helpers'
 
   // create all the css vars based on a js object
@@ -40,32 +40,9 @@
       }
     </${'style'}>
   `}
-
-  <!-- preload fonts for performance reasons -->
-  <!-- <link
-    rel='preload'
-    as='font'
-    crossorigin='anonymous'
-    href={'/fonts/LabDJR-VF.woff'}
-    type='font/woff'
-  />
-  <link
-    rel='preload'
-    as='font'
-    crossorigin='anonymous'
-    href={'/fonts/Barlow.woff2'}
-    type='font/woff2'
-  />
-  <link
-    rel='preload'
-    as='font'
-    crossorigin='anonymous'
-    href={'/fonts/Recursive.woff2'}
-    type='font/woff2'
-  /> -->
 </svelte:head>
 
-<style global type='text/scss'>
+<style global>
 
   // -------------
   // fonts
@@ -214,12 +191,32 @@
   }
 
   // -------------
-  // utility classes
+  // utility classes & accessibility helpers
   // -------------
 
   body[data-no-js] .needs-js {
 		display: none;
 	}
+
+  .container {
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--extra);
+  }
+
+  .readable {
+    max-width: var(--readableMax);
+  }
+  .visually-hide {
+    position: absolute;
+    box-sizing: content-box;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
 
   .x {
     position: relative;
@@ -277,7 +274,7 @@
     display: block;
     cursor: pointer;
     border: none;
-    background: var(--colorHighlight);
+    background-color: var(--colorHighlight);
     color: var(--colorWhite);
     transition: var(--transitionSpeed);
     font-size: 1em;
@@ -285,7 +282,7 @@
 
     &:hover,
     &:focus {
-      background: var(--colorActive);
+      background-color: var(--colorActive);
     }
   }
 
@@ -328,16 +325,6 @@
   }
   sup {
     top: -0.5em;
-  }
-  p {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: 1.45rem;
   }
   fieldset,
   address {

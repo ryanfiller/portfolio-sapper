@@ -1,13 +1,17 @@
-<style global type='text/scss'>
-  // @import '../../styles/functions.scss';
+<!-- TODO move these styles somewhere else, they really should effect more than markdown -->
 
+<style global>
   .markdown {
     padding: calc(2 * var(--padding));
-    @include readable();
     line-height: 1.5;
 
-    // headings
-    @mixin headingStyles() {
+    /* headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       position: relative;
       display: block;
       margin: 0;
@@ -40,7 +44,7 @@
           }
         }
     
-        // undo link styles, this is dumb...
+        /* undo link styles, this is dumb... */
         color: currentColor !important;
         border-bottom: none !important;
         background-image: none !important;
@@ -49,32 +53,26 @@
     
     h1 {
       font-size: 2.4em;
-      @include headingStyles;
     }
     
     h2 {
       font-size: 1.8em;
-      @include headingStyles;
     }
     
     h3 {
       font-size: 1.6em;
-      @include headingStyles;
     }
     
     h4 {
       font-size: 1.4em;
-      @include headingStyles;
     }
     
     h5 {
       font-size: 1.2em;
-      @include headingStyles;
     }
     
     h6 {
       font-size: 1em;
-      @include headingStyles;
     }
 
     li {
@@ -103,8 +101,8 @@
       margin-bottom: 0;
     }
     
-    // images
-    // ...and other media I guess.
+    /* images */
+    /* ...and other media I guess. */
     img,
     figure,
     video,
@@ -147,7 +145,7 @@
         @include small() {
             display: block;
             width: 100%;
-            max-width: none !important; // full supercedes small
+            max-width: none !important; /* full supercedes small */
             height: auto;
             margin: 0 0 1rem 0;
         }
@@ -159,7 +157,7 @@
         }
       }
     
-      // for when figure.image and img is a child
+      /* for when figure.image and img is a child */
       img {
         display: block;
         line-height: 0;
@@ -178,7 +176,7 @@
       }
     }
     
-    // iframes
+    /* iframes */
     .embed {
       position: relative;
       overflow: hidden;
@@ -208,7 +206,7 @@
       }
     }
 
-    // links
+    /* links */
     p,
     dl, ol, ul,
     blockquote {
@@ -219,12 +217,12 @@
         border-bottom: 2px currentColor dotted;
       
         @include medium() {
-          @include highlight();
+          /* @include highlight(); */
         }
       }
     }
     
-    // blockquotes 
+    /* blockquotes  */
     blockquote {
       margin: var(--padding) 0;
       padding: 0 var(--padding);
@@ -245,7 +243,7 @@
       }
     }
     
-    // twitter
+    /* twitter */
     .twitter-tweet {
       --twitterBlue: #1da1f2;
       --twitterGray: #ccd6dd;
@@ -264,11 +262,11 @@
       margin: var(--verticalSpacing) auto;
       position: relative;
 
-      // specificity!
+      /* specificity! */
       div.account,
       div.tweet,
       div.meta {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important; // twitter's font styles
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important; /* twitter's  font styles */
         font-variation-settings: initial !important;
       }
     
@@ -384,7 +382,7 @@
       }
     }
 
-    // definitions
+    /* definitions */
     dfn {
       font-style: italic;
     }
@@ -395,7 +393,7 @@
       margin-left: 1em;
     }
 
-    // table
+    /* table */
 
     table:not(.color-contrast-table) {
       margin-top: var(--verticalSpacing);
@@ -449,7 +447,7 @@
     }
 
     pre {
-      // TODO make a remark/rehype plugin for this, put a utility class on it
+      /* TODO make a remark/rehype plugin for this, put a utility class on it */
       --width: calc(100vw - (2 * var(--padding)));
       width: var(--width);
       position: relative;
@@ -470,6 +468,7 @@
       }
     }
 
+    pre,
     pre[class*='language-'] {
       white-space: pre;
       word-spacing: normal;
@@ -485,7 +484,9 @@
 
       code {
         display: block;
-        @include readable();
+        max-width: var(--readableMax);
+        margin-left: auto;
+        margin-right: auto;
         background: none;
         line-height: 1.75;
         color: var(--colorText);
@@ -563,6 +564,6 @@
   }
 </style>
 
-<article class='markdown'>
+<article class='markdown container readable'>
   <slot />
 </article>

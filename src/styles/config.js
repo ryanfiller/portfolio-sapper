@@ -39,6 +39,13 @@ export const themes = {
   }
 }
 
+export const breakpoints = {
+  small: 576,
+  medium: 768,
+  large: 992,
+  extra: 1400
+}
+
 export const fonts = {
   LabDJR: {
     name: 'LabDJR',

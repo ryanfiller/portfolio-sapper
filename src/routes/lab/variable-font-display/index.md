@@ -16,7 +16,7 @@ url:
 ---
 
 <script>
-  import { fonts } from '../../../styles.js'
+  import { fonts } from '../../../styles/config.js'
   import VariableFont from '../../../components/misc/variable-font.svelte'
 </script>
 

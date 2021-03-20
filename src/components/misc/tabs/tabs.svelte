@@ -11,20 +11,18 @@
   })})
 </script>
 
-<style global type='text/scss'>
-  :root {
+<style global>
+  .tabs {
     --borderColor: var(--colorPrimary);
     --border: var(--borderWidth) solid var(--borderColor);
-  }
-  
-  .tabs {
+
     display: flex;
     flex-wrap: wrap;
-    position: relative; // keep the inputs from going toooooo far
+    position: relative; /* keep the inputs from going toooooo far */
     margin-top: var(--verticalSpacing);
     margin-bottom: var(--verticalSpacing);
 
-    // weird offsets that will work at all sizes
+    /* weird offsets that will work at all sizes */
     margin-left: -1em;
     
     label, 
@@ -65,7 +63,7 @@
       z-index: 1;
 
       & > * {
-        // this is to combat code style width
+        /* this is to combat code style width */
         margin: 0;
         left: unset;
         right: unset;
@@ -77,7 +75,7 @@
       }
     }
 
-    // not active states
+    /* not active states */
     label,
     input:checked ~ label ~ label {
       z-index: 0;
@@ -95,7 +93,7 @@
       display: none;
     }
 
-    // YES active states
+    /* YES active states */
     input:checked ~ label {
       z-index: 10;
       border-color: var(--borderColor);
@@ -108,7 +106,7 @@
     }
 
 
-    // hover/focus states 
+    /* hover/focus states  */
     label:hover,
     input:focus + label {
       background-color: var(--colorHighlight) !important;
@@ -117,7 +115,7 @@
       }
     }
 
-    // hover/focus for already active
+    /* hover/focus for already active */
     input:checked + label:hover {
       background-color: var(--borderColor) !important;
     }

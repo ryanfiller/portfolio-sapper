@@ -1,12 +1,9 @@
 <!-- TODO make this a generic 'collapse' or something component-->
 
-<style global type='text/scss'>
-  // @import '../../styles/functions.scss';
-  
+<!-- <style global>
   .change {
-    border: .125rem solid var(--colorPrimary);
-    border-radius: .25rem;
-    padding: calc(var(--padding)/2) var(--padding);
+    padding: var(--padding);
+    background: var(--pixelBorder);
     margin-bottom: var(--padding);
 
     p {
@@ -29,7 +26,7 @@
 
         &::before{
           content: '';
-          @include arrow;
+          /* @include arrow; */
           transition: var(--transitionSpeed);
           margin-right: .25em;
         }
@@ -65,7 +62,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <!-- TODO - refactor this to use 'callout' component -->
 

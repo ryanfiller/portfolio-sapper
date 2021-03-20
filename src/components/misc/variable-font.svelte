@@ -1,10 +1,8 @@
-<style type='text/scss'>
-  // @import '../../styles/functions.scss';
-
+<style>
   .variable-font {
     margin: var(--padding) 0;
 
-    &__link {
+    .link {
       font-size: .75em;
       text-transform: uppercase;
       text-decoration:none;
@@ -21,7 +19,7 @@
       }
     }
 
-    &__options {
+    .options {
       margin: 0 var(--padding);
       padding: var(--padding);
     }
@@ -32,7 +30,7 @@
     }
 
 
-    &__slider {
+    .slider {
       display: flex;
       align-items: center;
 
@@ -49,13 +47,13 @@
       }
     }
 
-    &__checkbox {
+    .checkbox {
       input {
         margin: 0;
       }
     }
 
-    &__select {
+    .select {
       display: flex;
 
       select {
@@ -63,7 +61,7 @@
       }
     }
 
-    &__code {
+    .code {
       padding: var(--padding);
       display: flex;
       align-items: center;
@@ -76,12 +74,7 @@
       }
     }
 
-    &__example {
-
-      label {
-        @include visuallyHide;
-      }
-      
+    .example {      
       textarea {
         padding: var(--padding);
         resize: vertical;
@@ -103,22 +96,22 @@
         "link example example"
         "link options code";
 
-      &__link {
+      .link {
         grid-area: link;
         writing-mode: sideways-lr;
         // well this feels weird...
         text-align: right;
       }
 
-      &__options {
+      .options {
         grid-area: options;
       }
 
-      &__example {
+      .example {
         grid-area: example;
       }
       
-      &__code {
+      .code {
         grid-area: code;
         margin-top: 1rem;
       }
@@ -165,17 +158,17 @@
   <a
     target="_blank"
     rel="noopener noreferrer"
-    class='variable-font__link'
+    class='link'
     href={url}
   >
     {name}
   </a>
 
-  <fieldset class='variable-font__options'>
+  <fieldset class='options'>
     <legend>Options:</legend>
 
     {#each Object.values(styleOptions) as variable, index}
-      <div class='variable-font__slider'>
+      <div class='slider'>
         <label for={makeId(`${variable.name}-slider`)}>
           {variable.name}
         </label>
@@ -188,7 +181,7 @@
       </div>
     {/each}
 
-    <div class='variable-font__checkbox'>
+    <div class='checkbox'>
       <label for={makeId('italic')}>italic</label>
       <input
         type='checkbox'
@@ -197,7 +190,7 @@
       />
     </div>
 
-    <div class='variable-font__select'>
+    <div class='select'>
       <label for={makeId('capitalization')}>text-transform</label>
       <select
         id={makeId('capitalization')}
@@ -212,11 +205,11 @@
     
   </fieldset>
 
-  <div class='variable-font__example'>
+  <div class='example visually-hide'>
     <label for={makeId('example-text')}>text example</label>
     <textarea
       id={makeId('example-text')}
-      class='variable-font__example'
+      class='example'
       wrap='hard'
       bind:value={text}
       style="
@@ -228,7 +221,7 @@
     />
   </div>
 
-  <pre class='variable-font__code'>
+  <pre class='code'>
     <code>
 font-family: "{name}";
 font-variation-settings: {

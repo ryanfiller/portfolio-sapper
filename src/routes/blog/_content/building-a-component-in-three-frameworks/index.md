@@ -106,7 +106,7 @@ There isn't a ton to say about this, other than that all three frameworks have b
 
 Components are small pieces of reusable code that combine to build up complex applications, which is called "component composition." Often they accept data from their parent components and display or transform it in some way. Most modern JavaScript frameworks refer to passed data as "props," short for properties.
 
-![a color block component](/images/color-block.png){data-align='left' data-small='true'}
+![a color block component](/images/color-block.png){data-align='right' data-small='true'}
 
 The most simple component in my color-chart is the `<Color>` component. This component needs to look at a `color` object which will contain a `name`, `value`, `score`, and contrast `ratio`. 
 

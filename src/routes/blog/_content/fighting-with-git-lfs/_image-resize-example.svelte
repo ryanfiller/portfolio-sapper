@@ -4,7 +4,7 @@
   const params = `?nf_resize=fit&w=${width}`
 </script>
 
-<style type='text/scss'>
+<style>
   .image-resize-example {
     margin: var(--padding) 0;
 
@@ -36,6 +36,10 @@
     value={width}
     on:change={handleWidthChange}
   />
-  <pre>{`<img src="image.jpg${params}" />`}</pre>
+  <pre>
+    <code>
+      {`<img src="image.jpg${params}" />`}
+    </code>
+  </pre>
   <img alt="dog placeholder, her name is Ollie" src={`/images/site-assets/_placeholder.jpg${params}`}/>
 </div>
