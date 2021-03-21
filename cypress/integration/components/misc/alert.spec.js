@@ -8,7 +8,7 @@ describe('<Alert /> component', () => {
   it('renders correctly', () => {
     cy.get('aside.alert').within(() => {
       cy.get('header').should('exist')
-      cy.get('.alert__content').should('exist')
+      cy.get('.content').should('exist')
     })
     cy.checkA11y('aside.alert')
   })

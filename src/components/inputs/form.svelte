@@ -75,7 +75,7 @@
   }
 </style>
 
-<div class={`form ${name} ${state}`} >
+<div class={`readable container form ${name} ${state}`} >
   {#if state === 'sent'}
 
     <div class='success'>
@@ -112,7 +112,7 @@
 
     <form
       id={name}
-      class='form readable container'
+      class='form'
       name={name}
       data-netlify='true'
       data-netlify-honeypot='bot-field'

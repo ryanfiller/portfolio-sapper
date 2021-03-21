@@ -39,7 +39,7 @@ describe('<Form /> component', () => {
         })
 
         cy.get('form#contact').should('not.exist')
-        cy.get('.form__success').within(() => {
+        cy.get('.success').within(() => {
           cy.get('button[type="reset"]').click()
         })
         cy.get('form#contact').should('exist')
@@ -58,7 +58,7 @@ describe('<Form /> component', () => {
 
       it('shows failure message, resets, and does not clear data', () => {
         cy.get('form#contact').should('not.exist')
-        cy.get('.form__error').within(() => {
+        cy.get('.error').within(() => {
           cy.get('button[type="reset"]').click()
         })
         cy.get('form#contact').should('exist')

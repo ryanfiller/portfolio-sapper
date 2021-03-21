@@ -26,9 +26,9 @@ describe('<Banner /> component', () => {
 
     it('renders a figure element and content', () => {
       cy.get('h1').should('exist')
-      cy.get('figure.banner-image').should('exist')
-      cy.get('figure.banner-image').find('img').should('exist')
-      cy.get('figure.banner-image').find('figcaption').should('exist')
+      cy.get('figure').should('exist')
+      cy.get('figure').find('img').should('exist')
+      cy.get('figure').find('figcaption').should('exist')
       cy.checkA11y('#page-banner')
     })
   })
@@ -36,13 +36,15 @@ describe('<Banner /> component', () => {
   context('/blog subpages', () => {  
     beforeEach(() => {
       cy.visit('/blog')
-      cy.get('.post-preview').eq(0).find('a').eq(0).click()
+      cy.get('.post-preview').find('a')
+        .invoke('attr', 'href')
+        .then(href => { cy.visit(href) })
       cy.injectAxe()
     })
 
     it('renders the correct elements', () => {
       cy.get('.banner[data-segment="blog"]').should('exist')
-      cy.get('figure.banner-image').should('exist')
+      cy.get('figure').should('exist')
       cy.get('.banner').within(() => {
         cy.get('h1').should('exist')
         cy.get('.date').should('exist')
@@ -55,13 +57,15 @@ describe('<Banner /> component', () => {
   context('/lab subpages', () => {  
     beforeEach(() => {
       cy.visit('/lab')
-      cy.get('.post-preview').eq(0).find('a').eq(0).click()
+      cy.get('.post-preview').find('a')
+        .invoke('attr', 'href')
+        .then(href => { cy.visit(href) })
       cy.injectAxe()
     })
 
     it('renders the correct elements', () => {
       cy.get('.banner[data-segment="lab"]').should('exist')
-      // cy.get('figure.banner-image').should('exist')
+      // cy.get('figure').should('exist')
       cy.get('.banner').within(() => {
         cy.get('h1').should('exist')
         cy.get('.date').should('not.exist')

@@ -10,7 +10,7 @@
   import PostPreview from './post-preview.svelte'
 
   const renderHeader = () => `
-    <h${h} class='post-preview__header'>
+    <h${h} class='header'>
     ${hidePosts
       ? `<a sapper:prefetch href=${slug}>
         ${title}

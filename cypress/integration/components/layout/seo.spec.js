@@ -33,8 +33,8 @@ describe('<SEO /> component', () => {
 
     cy.get('article.post-preview').each((_article, index) => {
       const obj = {}
-      cy.get('.post-preview__header').eq(index).invoke('text').then(text => obj.title = text)
-      cy.get('.post-preview__excerpt').eq(index).invoke('text').then(text => obj.excerpt = text)
+      cy.get('.header').eq(index).invoke('text').then(text => obj.title = text)
+      cy.get('p').eq(index).invoke('text').then(text => obj.excerpt = text)
       obj.keywords = []
       cy.get('ul.categories').eq(index).within(() => {
         cy.get('li').each(li => obj.keywords.push(li.text()))
@@ -46,12 +46,12 @@ describe('<SEO /> component', () => {
     }).then(() => {
       const random = Math.floor(Math.random() * posts.length)
 
-      cy.get('article.post-preview').eq(random).find('.post-preview__header > a')
+      cy.get('article.post-preview').eq(random).find('.header > a')
       .should('have.attr', 'href')
       .then((href) => cy.visit(href))
 
       cy.title()
-        .should('eq', `${posts[random].title} | ryanfiller.com`)
+        .should('eq', `${posts[random].title.trim()} | ryanfiller.com`)
       cy.document().get('head meta[name="description"]')
         .should('have.attr', 'content', posts[random].excerpt)
 

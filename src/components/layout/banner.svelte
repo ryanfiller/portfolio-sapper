@@ -103,7 +103,7 @@
 
   /* match --headerWidth */
   @media (min-width: 1280px) {
-    :global(.date) {
+    .banner :global(.date) {
         text-align: right;
       }
 

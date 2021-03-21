@@ -2,7 +2,8 @@
 
 <style global>
   .markdown {
-    padding: calc(2 * var(--padding));
+    padding-top: calc(2 * var(--padding)) unset;
+    padding-bottom: calc(2 * var(--padding)) unset;
     line-height: 1.5;
 
     /* headings */

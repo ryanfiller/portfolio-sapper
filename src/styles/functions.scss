@@ -1,33 +1,23 @@
-// $smallBreak: 576px;
-// $mediumBreak: 768px;
-// $largeBreak: 992px;
-// $extraBreak: 1400px;
-
-// breakpoints
-
+// breakpoints are replaced by roll up with sizes from styes/config.js
 @mixin small() {
-  // @media screen and (min-width: $smallBreak) {
   @media screen and (min-width: js-replace-small) {
     @content;
   }
 }
 
 @mixin medium() {
-  // @media screen and (min-width: $mediumBreak) {
   @media screen and (min-width: js-replace-medium) {
     @content;
   }
 }
 
 @mixin large() {
-  // @media screen and (min-width: $largeBreak) {
   @media screen and (min-width: js-replace-large) {
     @content;
   }
 }
 
 @mixin extra() {
-  // @media screen and (min-width: $extraBreak) {
   @media screen and (min-width: js-replace-extra) {
     @content;
   }
