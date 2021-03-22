@@ -13,6 +13,20 @@ banner:
 
 <Change>
 
+## RF-05-06 - "Core Block"
+
+Change a bunch of internals
+
+</Change>
+
+<!-- moded form.svelte into input/form.svelte, abstracted inputs.svelte -->
+<!-- cleaned up rollup config, moved plugins to own export -->
+<!-- remoded container and readable, made utility classes -->
+<!-- added breakpoints to config.styles, made a styles directory and put stuff in it -->
+<!-- scaffolded svelte.config.js -->
+
+<Change>
+
 ## RF-05-05 - "Hazel"
 
 Performance Updates and Refactors

@@ -20,14 +20,6 @@ title: 'Style Guide'
 
 </div>
 
-```
-@mixin small() {
-  @media screen and (min-width: $smallBreak) {
-    @content;
-  }
-}
-```
-
 <div id="headings">
 
   # Heading level 1
