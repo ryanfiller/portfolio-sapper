@@ -32,13 +32,17 @@ describe('<SeriesNavigator /> component', () => {
   
     it('navigates forward and backwards', () => {
       cy.get('.buttons').within(() => {
-        cy.get('.next').click()
+        cy.get('.next')
+          .scrollIntoView()
+          .click()
       })
       cy.reload() // why???
       cy.get('.title').contains('This is post 2 of')
       cy.get('.buttons').within(() => {
         cy.get('.previous').should('exist')
-        cy.get('.previous').click()
+        cy.get('.previous')
+          .scrollIntoView()
+          .click()
       })
       cy.reload() // why???
       cy.get('.title').contains('This is post 1 of')
