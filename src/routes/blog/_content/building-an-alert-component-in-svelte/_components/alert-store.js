@@ -1,6 +1,8 @@
 import { writable } from 'svelte-local-storage-store'
-
-console.log('svelteLocalStorage', svelteLocalStorage)
+// import * as slss from 'svelte-local-storage-store'
+// const { writable } = slss
+// console.log('slss', slss)
+// console.log('writable', writable)
 
 export const alert = writable('alertBlogExample', {
   title: 'One Of My Favorite Quotes:',
