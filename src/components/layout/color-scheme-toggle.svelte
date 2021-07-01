@@ -68,6 +68,7 @@
 </svelte:head>
 
 <style>
+  /* freakin yikes at all the :global() going on here... */
   button {
     /* specificity to override display: none; */
     display: block !important;
