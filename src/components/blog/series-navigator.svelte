@@ -16,7 +16,7 @@
   }
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .series-navigator {
     &__title {
       color: var(--colorWhite);
@@ -59,7 +59,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 {#if series}  
   <aside class='series-navigator__title'>

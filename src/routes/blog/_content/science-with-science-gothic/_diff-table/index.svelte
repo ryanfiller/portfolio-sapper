@@ -1,6 +1,6 @@
 <!-- TODO - figure out where to put `svelte-ignore css-unused-selector` in this file -->
 
-<style global>
+<!-- <style global>
   .diff-table .diff {
     font-size: .75em;
     font-weight: bold;
@@ -15,7 +15,7 @@
   .diff-table .diff--decrease {
     color: var(--colorActive);
   }
-</style>
+</style> -->
 
 <script>
   export let data

@@ -11,7 +11,7 @@
   })})
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   :root {
     --borderColor: var(--colorPrimary);
     --border: var(--borderWidth) solid var(--borderColor);
@@ -122,7 +122,7 @@
       background-color: var(--borderColor) !important;
     }
   }
-</style>
+</style> -->
 
 <div
   class='tabs'

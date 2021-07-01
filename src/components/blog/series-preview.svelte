@@ -21,7 +21,7 @@
   `
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   // this is currently inehertting .post-preview from `global` in post-preview.svelte
 
   @import '../../styles/functions.scss';
@@ -39,7 +39,7 @@
       margin: 0;
     }
   }
-</style>
+</style> -->
 
 <article class='post-preview series-preview'>
   {#if !!title}

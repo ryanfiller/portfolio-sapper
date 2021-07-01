@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
   .exapmle-wrapper {
     margin: 0 auto;
   }
@@ -104,7 +104,7 @@
     margin: 0;
   }
 
-</style>
+</style> -->
 
 <!-- svelte-ignore best-practice -->
 <!-- ARIA role="presentation" here is intentional -->

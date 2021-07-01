@@ -7,7 +7,7 @@
   import Transform from './transform.svelte'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .data-flow-chart {
     list-style: none;
     padding: 0 var(--padding);
@@ -116,7 +116,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <ol class={nested ? 'data-flow-chart nested' : 'data-flow-chart top-level'}>
   {#each data as block, index}

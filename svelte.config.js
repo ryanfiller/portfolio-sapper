@@ -100,7 +100,7 @@ const config = {
 
 	preprocess: [
 		sveltePreprocess({
-			defaults: { style: 'scss' },
+			defaults: { style: 'postcss' },
 		}),
 		mdsvex({
 			extension: '.md',

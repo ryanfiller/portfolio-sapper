@@ -2,13 +2,13 @@
   import ColorSchemeToggle from '../../../../../components/layout/color-scheme-toggle.svelte'
 </script>
 
-<style>
+<!-- <style>
   .color-scheme-toggle-demo {
     display: flex;
     justify-content: center;
     font-size: 3em;
   }
-</style>
+</style> -->
 
 <div class='color-scheme-toggle-demo'>
   <ColorSchemeToggle />

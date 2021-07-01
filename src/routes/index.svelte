@@ -32,7 +32,7 @@
   import Form from '../components/form.svelte'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
 
   @import '../styles/functions.scss';
 
@@ -65,7 +65,7 @@
     }
   }
 
-</style>
+</style> -->
 
 <Page hideBanner>
   <section class='temp-bio'>

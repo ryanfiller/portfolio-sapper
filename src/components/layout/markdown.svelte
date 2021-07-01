@@ -1,4 +1,4 @@
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
 
   .markdown {
@@ -539,7 +539,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <article class='markdown'>
   <slot />

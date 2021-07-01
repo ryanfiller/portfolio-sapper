@@ -6,7 +6,7 @@
   export let checked = false
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .toggle {
     input,
     label span {
@@ -42,7 +42,7 @@
       background-color: var(--colorActive);
     }
   }
-</style>
+</style> -->
 
 <div class='toggle'>
   <input

@@ -32,7 +32,7 @@
 
 <!-- TODO this entire idea needs to get rewritten and tested -->
 
-<style global>
+<!-- <style global>
 
   .photo-grid {
     clear: both;
@@ -172,7 +172,7 @@
     mix-blend-mode: multiply;
     z-index: -1;
   }
-</style>
+</style> -->
 
 <svelte:window on:keydown={event => {
   if (event.keyCode === 27) { // escape key

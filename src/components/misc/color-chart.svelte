@@ -52,7 +52,7 @@
 
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .color-chart {
     width: 100%;
     overflow-x: auto;
@@ -92,7 +92,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <!-- bummer, this only works for js people -->
 <svelte:head>

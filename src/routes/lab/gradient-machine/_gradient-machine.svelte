@@ -128,7 +128,7 @@
 
 <svelte:head>
   {@html `
-    <style>
+    <${'style'}>
       :root {
         --gradientMachine: ${$css.join(', ')};
         --gradientMachineBlendMode: ${$gradient.blendMode};
@@ -149,11 +149,11 @@
         background-repeat: var(--gradientMachineRepeat);
         mix-blend-mode: overlay;
       }
-    </style>
+    </${'style'}>
   `}
 </svelte:head>
 
-<style>
+<!-- <style>
   .gradient {
     overflow: hidden;
     resize: both;
@@ -282,7 +282,7 @@
     border: none;
     resize: none;
   }
-</style>
+</style> -->
 
 <div class='gradient'></div>
 

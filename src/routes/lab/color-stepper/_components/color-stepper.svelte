@@ -1,4 +1,4 @@
-<style global lang='scss'>
+<!-- <style global>
   @import '../../../../styles/functions.scss';
   
   .color-stepper {
@@ -86,7 +86,7 @@
       @include visuallyHide;
     }
   }
-</style>
+</style> -->
 
 <script>
   import { onMount } from 'svelte'

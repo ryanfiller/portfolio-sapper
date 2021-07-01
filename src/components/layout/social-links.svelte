@@ -22,7 +22,7 @@
   }
 </script>
 
-<style global>
+<!-- <style global>
   .social-list {
     list-style: none;
     margin-left: 0;
@@ -47,7 +47,7 @@
   .social-list__item:hover a {
     background-color: currentColor;
   }
-</style>
+</style> -->
 
 <ul class='social-list'>
   {#each links as link}

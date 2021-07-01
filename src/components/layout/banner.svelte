@@ -10,7 +10,7 @@
   import TagList from '../content/tag-list.svelte'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
 
   :root {
@@ -118,7 +118,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <div
   id='page-banner'

@@ -1,4 +1,4 @@
-<style type='text/scss'>
+<!-- <style>
   @import '../../../../styles/functions.scss';
 
   .variable-font {
@@ -124,7 +124,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <script>
   import { slugify } from '../../../../helpers'

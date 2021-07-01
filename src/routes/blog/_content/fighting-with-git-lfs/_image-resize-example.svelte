@@ -4,7 +4,7 @@
   const params = `?nf_resize=fit&w=${width}`
 </script>
 
-<style type='text/scss'>
+<!-- <style>
   .image-resize-example {
     margin: var(--padding) 0;
 
@@ -23,7 +23,7 @@
       max-width: 100%;
     }
   }
-</style>
+</style> -->
 
 <div class='image-resize-example'>
   <label for='width'>image width</label>

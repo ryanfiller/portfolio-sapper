@@ -96,7 +96,7 @@
 	$: image = images[Math.floor(Math.random() * images.length)]
 </script>
 
-<style global>
+<!-- <style global>
 	#content.error {
 		color: var(--colorWhite);
 		font-family: var(--display);
@@ -242,7 +242,7 @@
 		z-index: 10;
 		font-family: var(--mono);
 	}
-</style>
+</style> -->
 
 <svelte:head>
 	<title>Error {status} | {site.title}</title>

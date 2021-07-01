@@ -11,7 +11,7 @@
   const toggleTheme = () => theme === 'light' ? theme = 'dark' : theme = 'light'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .theme-example {
     --white: #ffffff;
     --black: #000000;
@@ -62,7 +62,7 @@
       display: block;
     }
   }
-</style>
+</style> -->
 
 <figure class='needs-js' data-align='right'>
   <section class={`theme-example theme-example--${theme}`}>

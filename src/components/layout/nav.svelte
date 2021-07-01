@@ -4,7 +4,7 @@
   export let links = []
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
 
   .nav {
@@ -62,7 +62,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <!-- TODO? rel=prefetch on any of these? -->
 

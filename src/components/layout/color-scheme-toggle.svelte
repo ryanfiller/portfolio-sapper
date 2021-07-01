@@ -67,7 +67,7 @@
   `}
 </svelte:head>
 
-<style global type='text/scss'>
+<!-- <style global>
 
   .color-scheme-toggle-button {
     background: transparent;
@@ -134,7 +134,7 @@
     }
   }
 
-</style>
+</style> -->
 
 <button
   class='needs-js color-scheme-toggle-button'

@@ -3,7 +3,7 @@
   export let categories = []
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .tag-list {
     .categories,
     .tags {
@@ -37,7 +37,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <div class='tag-list'>
   {#if !!categories}

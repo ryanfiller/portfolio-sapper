@@ -11,7 +11,7 @@
   $: localStorageMatch = encodedContent === $alert.id
 </script>
 
-<style>
+<!-- <style>
   section {
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@
   .buttons button:not(:last-child) {
     margin-right: 1rem;
   }
-</style>
+</style> -->
 
 <section>
 

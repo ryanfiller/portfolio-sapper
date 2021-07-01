@@ -10,7 +10,7 @@
   import focusTrap from '../../actions/focus-trap.js'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .alert {
     position: fixed;
     top: 0;
@@ -57,7 +57,7 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
-</style>
+</style> -->
 
 <svelte:window on:keydown={(show && close) ? event => event.key === 'Escape' && close() : null}/>
 

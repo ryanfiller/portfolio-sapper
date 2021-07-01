@@ -5,7 +5,7 @@
   import ColorSchemeToggle from './color-scheme-toggle.svelte'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
 
   .header {
@@ -57,7 +57,7 @@
       align-items: center;
     }
   }
-</style>
+</style> -->
 
 <header
   id='site-header'

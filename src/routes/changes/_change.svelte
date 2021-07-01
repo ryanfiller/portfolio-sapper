@@ -1,6 +1,6 @@
 <!-- TODO make this a generic 'collapse' or something component-->
 
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
   
   .change {
@@ -65,7 +65,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <!-- TODO - refactor this to use 'callout' component -->
 

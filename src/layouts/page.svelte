@@ -12,7 +12,7 @@
   const alertActive = $$slots.alert
 </script>
 
-<style global>
+<!-- <style global>
 	#site {
     min-height: 100vh;
     width: 100%;
@@ -47,7 +47,7 @@
     width: 100%;
     height: 100%;
   }
-</style>
+</style> -->
 
 <SEO {segment} {...$$props} />
 

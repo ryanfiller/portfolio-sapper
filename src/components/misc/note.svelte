@@ -7,7 +7,7 @@
   const id = `${slugify(title)}`
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
 
   .note {
@@ -88,7 +88,7 @@
       overflow: hidden;
     }
   }
-</style>
+</style> -->
 
 {#if show}
   <section

@@ -19,7 +19,7 @@
   }
 </script>
 
-<style>
+<!-- <style>
   dialog {
     position: fixed;
     top: 0;
@@ -81,7 +81,7 @@
   div.buttons button:not(:last-child) {
     margin-right: 1rem;
   }
-</style>
+</style> -->
 
 <svelte:window on:keydown={event => {event.key === 'Escape' ? close() : null}}/>
 

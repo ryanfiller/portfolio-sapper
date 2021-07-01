@@ -20,7 +20,7 @@
   `
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .post-preview {
     a {
       font-family: sans-serif;
@@ -68,7 +68,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <article class='post-preview'>
   {@html renderHeader()}

@@ -41,7 +41,7 @@
   `}
 </svelte:head>
 
-<style global type='text/scss'>
+<!-- <style global>
 
   // -------------
   // fonts
@@ -362,4 +362,4 @@
     text-decoration: none;
   }
 
-</style>
+</style> -->

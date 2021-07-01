@@ -11,7 +11,7 @@
   const format = date => date.toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   .date {
     display: block;
 
@@ -20,7 +20,7 @@
       display: block;
     }
   }
-</style>
+</style> -->
 
 {#if Array.isArray(date)}
   <div class='date'>

@@ -6,7 +6,7 @@
   import SocialLinks from './social-links.svelte'
 </script>
 
-<style global type='text/scss'>
+<!-- <style global>
   @import '../../styles/functions.scss';
 
   .footer {
@@ -38,7 +38,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 
 

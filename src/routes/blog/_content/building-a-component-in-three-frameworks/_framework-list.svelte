@@ -1,4 +1,4 @@
-<style global type='text/scss'> 
+<!-- <style global> 
   .framework-list {
     --iconSize: 2rem;
 
@@ -50,7 +50,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <section class='framework-list'>
   <ul>

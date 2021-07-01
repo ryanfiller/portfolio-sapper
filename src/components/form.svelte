@@ -1,4 +1,4 @@
-<style global type='text/scss'>
+<!-- <style global>
   .form {
     --labelHeight: 1.25em;
     --rowHeight: 4em;
@@ -143,7 +143,7 @@
       }
     }
   }
-</style>
+</style> -->
 
 <script>
   export let name = ''
