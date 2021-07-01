@@ -56,7 +56,7 @@
   id='site'
   class={segment}
 >
-  <Header>
+  <Header {segment}>
     {#if !hideBanner}
       <Banner {segment} {...$$props} />
     {/if}

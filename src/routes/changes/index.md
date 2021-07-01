@@ -135,6 +135,15 @@ Change some internals
 |   - ≈ `netlify.toml`
 |   - ≈ `.gitignore`
 |
+| - Styles
+|   - functions
+<!-- |     - \+ animate -->
+|     - \- arrow
+|     - \- visuallyHide
+<!-- |     - \+ highlight -->
+|   - utility classes
+|     - \+ .screenreader
+|
 | - Packages
 |   - \+ cypress-plugin-tab
 |   - \- compression

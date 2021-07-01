@@ -64,7 +64,7 @@
   <a href='/' class='logo'>
     ryanfiller.com
   </a>
-
+  
   <Nav
     segment={segment}
     label='main navigation'

@@ -79,7 +79,7 @@
     &__example {
 
       label {
-        @include visuallyHide;
+        @include visuallyHide; TODO .screenreader
       }
       
       textarea {
