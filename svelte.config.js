@@ -10,6 +10,10 @@ import dynamicImportVars from '@rollup/plugin-dynamic-import-vars'
 import { default as svelteSVG } from '@poppanator/sveltekit-svg'
 
 import sveltePreprocess from 'svelte-preprocess'
+import autoprefixer from 'autoprefixer'
+import nesting from 'postcss-nesting'
+import customMedia from 'postcss-custom-media'
+
 import mdsvexDefault from 'mdsvex'
 const { mdsvex } = mdsvexDefault
 import attr from 'remark-attr'
@@ -101,6 +105,13 @@ const config = {
 	preprocess: [
 		sveltePreprocess({
 			defaults: { style: 'postcss' },
+			postcss: {
+				plugins: [
+					autoprefixer,
+					nesting,
+					customMedia
+				]
+			}
 		}),
 		mdsvex({
 			extension: '.md',
