@@ -22,15 +22,16 @@
   }
 </script>
 
-<!-- <style global>
-  .social-list {
+<style global>
+  ul {
     list-style: none;
-    margin-left: 0;
+    margin: 0;
+    padding: 0;
     display: flex;
     font-size: 1em;
   }
 
-  .social-list__link {
+  li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,16 +39,16 @@
     padding: .25em;
   }
   
-  .social-list__link svg {
+  li :global(svg) {
     fill: var(--colorWhite);
     height: 1em;
     width: 1em;
-  }
 
-  .social-list__item:hover a {
-    background-color: currentColor;
+    &:hover a {
+      background-color: currentColor;
+    }
   }
-</style> -->
+</style>
 
 <ul class='social-list'>
   {#each links as link}

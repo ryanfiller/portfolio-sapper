@@ -6,28 +6,26 @@
   import SocialLinks from './social-links.svelte'
 </script>
 
-<!-- <style global>
-  @import '../../styles/functions.scss';
-
+<style global>
   .footer {
     font-size: 1em;
     color: var(--colorWhite);
     background: var(--colorPrimary);
     
-    &__content {
-      padding-top: 1rem;
-      @include container;
+    & div {
       font-weight: bold;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
 
-      & > * {
-        margin-bottom: 1rem;
+      & span,
+      & :global(ul),
+      & :global(nav) {
+        margin: 1rem var(--padding);
       }
     
-      a {
+      & a {
         text-decoration: none;
         color: currentColor;
         margin: 0 .25em;
@@ -38,7 +36,7 @@
       }
     }
   }
-</style> -->
+</style>
 
 
 
@@ -46,7 +44,7 @@
   id='site-footer'
   class='footer'
 >
-  <div class='footer__content'>
+  <div class='container'>
     <span>
       Built with
       <a href='https://kit.svelte.dev/' target='_blank' rel='noopener noreferrer'>
