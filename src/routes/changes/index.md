@@ -17,6 +17,8 @@ banner:
 
 Change some internals
 
+<!-- TODO styles and config got moved into styles -->
+
 [refactor/code-highlighting](https://github.com/ryanfiller/portfolio-svelte/pull/36) - Replace `Prism` with a `remark` plugin.
 
 [feature/lab-pop-up](https://github.com/ryanfiller/portfolio-svelte/pull/40) - Rename some components, add a warning to `/lab` pages

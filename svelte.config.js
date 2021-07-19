@@ -109,7 +109,11 @@ const config = {
 				plugins: [
 					autoprefixer,
 					nesting,
-					customMedia
+					customMedia({
+						importFrom: [
+							'src/styles/custom-media.css'
+						]
+					})
 				]
 			}
 		}),

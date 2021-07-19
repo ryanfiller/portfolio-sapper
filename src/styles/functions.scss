@@ -1,34 +1,3 @@
-$smallBreak: 576px;
-$mediumBreak: 768px;
-$largeBreak: 992px;
-$extraBreak: 1400px;
-
-// breakpoints
-
-@mixin small() {
-  @media screen and (min-width: $smallBreak) {
-    @content;
-  }
-}
-
-@mixin medium() {
-  @media screen and (min-width: $mediumBreak) {
-    @content;
-  }
-}
-
-@mixin large() {
-  @media screen and (min-width: $largeBreak) {
-    @content;
-  }
-}
-
-@mixin extra() {
-  @media screen and (min-width: $extraBreak) {
-    @content;
-  }
-}
-
 // containers
 
 @mixin container() {
@@ -37,6 +6,7 @@ $extraBreak: 1400px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+  $extraBreak: 1400px;
   max-width: $extraBreak;
 }
 

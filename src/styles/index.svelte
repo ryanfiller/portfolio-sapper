@@ -1,6 +1,6 @@
 <script>
-  import { colors, themes } from '../../styles.js'
-  import { capitalize } from '../../helpers'
+  import { colors, themes } from './config.js'
+  import { capitalize } from '../helpers'
 
   // create all the css vars based on a js object
   const setColors = (colors) => {
@@ -77,7 +77,7 @@
     --verticalSpacing: calc(2 * var(--padding));
 
     /* sizing */
-    --containerMaxWidth: $largeBreak;
+    --containerMaxWidth: var(--largeSize);
     --borderRadius: 1rem;
     --borderWidth: calc(var(--padding) / 8);
 

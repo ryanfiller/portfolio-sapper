@@ -1,7 +1,7 @@
 <script>
   import Chart from 'color-contrast-table-svelte'
   import { onMount } from 'svelte'
-  import { colors, themes } from '../../styles.js'
+  import { colors, themes } from '../../styles/config.js'
   import { capitalize, getCustomProperty, setCustomProperty } from '../../helpers'
 
   const nameColor = color => `color${capitalize(color)}`

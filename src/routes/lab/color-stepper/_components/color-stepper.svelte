@@ -90,7 +90,7 @@
 
 <script>
   import { onMount } from 'svelte'
-  import { colors } from '../../../../styles.js'
+  import { colors } from '../../../../styles/config.js'
   import { capitalize, getCustomProperty } from '../../../../helpers'
   import { hexToHSL, HSLToHex } from './color-functions.js'
 
